@@ -1,0 +1,17 @@
+package DesignPatterns_And_Principles.FatoryMethodPattern_Example;
+
+public class DocumentTest {
+    public static void main(String[] args) {
+        DocumentFactory wordFactory = new WordFactory();
+        Document wordDoc = wordFactory.createDocument();
+        wordDoc.open();
+
+        DocumentFactory pdfFactory = new PdfFactory();
+        Document pdfDoc = pdfFactory.createDocument();
+        pdfDoc.open();
+
+        DocumentFactory excelFactory = new ExcelFactory();
+        Document excelDoc = excelFactory.createDocument();
+        excelDoc.open();
+    }
+}
